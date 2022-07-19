@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>talk</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="login">
+            <span>
+                kullanıcı adı giriniz
+            </span>
+            <input type="text" id="name" placeholder="kullanıcı adı" autocomplete="off">
+            <button onclick="sohbetebasla();">
+                <i class="fa fa-comment"></i>
+                baglan
+            </button>
+        </div>
+
+        <h2>sohbet</h2>
+        <ul id="messages" class="messages">
+         <!--  BASKASININ gonderdigi mesaj   -->
+
+            <li class="message">
+                <p class="text">Lorem ipsum dolor sit amet.</p>
+                <span class="sender">canimanan</span>
+                <span class="date">00:00</span>
+            </li>
+            <!--  bizim gonderdigimiz mesaj   -->
+
+            <li class="message my">
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus iusto temporibus doloribus dolore iure labore.</p>
+                <span class="date">00:00</span>
+            </li>
+        </ul>
+        <div class="input">
+            <input type="text" id="myinput">
+            <button onclick="mesajgonder();">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/database.js"></script>
+    <script src="java.js"></script>
+
+</body>
+</html>
